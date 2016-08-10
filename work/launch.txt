@@ -1,0 +1,5 @@
+su
+chmod 755 /data/local/tmp/launch
+/data/local/tmp/launch com.tencent.tmgp.cf /data/local/tmp/libxmono.so
+logcat -c
+logcat|grep mono

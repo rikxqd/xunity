@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: PlayerAutoFire.xml-->
+<behavior name="PlayerAutoFire" agenttype="behaviac::LocalPlayer" version="5">
+  <node class="DecoratorLoop" id="4">
+    <property Count="const int -1" />
+    <property DecorateWhenChildEnds="true" />
+    <property DoneWithinFrame="false" />
+    <node class="IfElse" id="0">
+      <node class="Condition" id="1">
+        <property Operator="Equal" />
+        <property Opl="Self.behaviac::LocalPlayer::IsHaveAimAssistTarget()" />
+        <property Opr="const bool true" />
+      </node>
+      <node class="Action" id="2">
+        <property Method="Self.behaviac::LocalPlayer::StartFire()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="3">
+        <property Method="Self.behaviac::LocalPlayer::StopFire()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+    </node>
+  </node>
+</behavior>
